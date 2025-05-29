@@ -1,6 +1,0 @@
-- route:
-    id: route-ab15
-    nodePrefixId: route-b86
-    from:
-      id: from-ad68
-      uri: file-watch
