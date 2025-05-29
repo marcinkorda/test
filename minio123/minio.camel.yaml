@@ -1,0 +1,19 @@
+- route:
+    id: route-a62c
+    nodePrefixId: route-d91
+    from:
+      id: from-506f
+      uri: minio
+      parameters:
+        bucketName: source
+        endpoint: http://172.20.105.182:9001
+        secure: false
+        objectName: test.txt
+      steps:
+        - to:
+            id: to-3447
+            uri: minio
+            parameters:
+              bucketName: target
+              endpoint: http://172.20.105.182:9001
+              operation: copyObject

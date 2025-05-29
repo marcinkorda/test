@@ -1,0 +1,8 @@
+services:
+  minio123:
+    image: minio123
+    restart: always
+    ports:
+      - "8082:8080"
+    networks:
+      - karavan
