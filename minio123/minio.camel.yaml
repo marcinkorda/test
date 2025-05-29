@@ -4,16 +4,24 @@
     from:
       id: from-506f
       uri: minio
+      variableReceive: global:undefined
       parameters:
         bucketName: source
-        endpoint: http://172.20.105.182:9001
+        endpoint: http://172.20.105.182:9000
         secure: false
         objectName: test.txt
+        destinationBucketName: target
+        destinationObjectName: test.txt
+        deleteAfterRead: false
+        includeBody: false
       steps:
         - to:
             id: to-3447
+            disabled: false
             uri: minio
+            pattern: InOut
             parameters:
               bucketName: target
-              endpoint: http://172.20.105.182:9001
-              operation: copyObject
+              endpoint: http://172.20.105.182:9000
+              secure: false
+              pojoRequest: false
