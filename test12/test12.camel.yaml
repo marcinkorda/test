@@ -1,0 +1,16 @@
+- route:
+    id: route-3778
+    nodePrefixId: route-129
+    from:
+      id: from-f633
+      uri: file
+      parameters:
+        directoryName: /data/source
+        fileName: test.txt
+      steps:
+        - to:
+            id: to-e7ba
+            uri: file
+            parameters:
+              directoryName: /data/target
+              fileName: test1.txt
